@@ -1,0 +1,14 @@
+<div *ngIf="user">
+  <h1>{{user.login}}</h1>
+  <ul class="list-group">
+    <li class="list-group-item"><label>Name: {{user.name}}</label></li>
+    <li class="list-group-item"><label>Company: {{user.company}}</label></li>
+    <li class="list-group-item"><label>Blog: {{user.blog}}</label></li>
+    <li class="list-group-item"><label>Location: {{user.location}}</label></li>
+    <li class="list-group-item"><label>Email: {{user.email}}</label></li>
+    <li class="list-group-item"><label>Bio: {{user.bio}}</label></li>
+    <li class="list-group-item"><label>Public Repos: {{user.public_repos}}</label></li>
+    <li class="list-group-item"><label>Followers: {{user.followers}}</label></li>
+    <li class="list-group-item"><label>Following: {{user.following}}</label></li>
+  </ul>
+</div>

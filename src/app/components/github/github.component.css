@@ -1,0 +1,10 @@
+.table-data {
+  height: 400px;
+  overflow-y: auto;
+}
+
+.gh-image {
+  width: 75px;
+  height: 75px;
+  float: right
+}

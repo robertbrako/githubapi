@@ -1,0 +1,30 @@
+<nav>
+  <h1>GitHub Users</h1>
+  <div class="table-row" style="margin-bottom: 10px">
+    <button type="button" class="btn btn-primary" (click)="onNextClick()">Next Users</button>
+    <button type="button" class="btn btn-primary" (click)="onResetClick()" *ngIf="userid > 80">First Page</button>
+  </div>
+  <table class="table" style="margin-bottom: 0">
+    <thead>
+      <tr>
+        <th class="col-md-4">Username</th>
+        <th class="col-md-8">URL</th>
+        <th class="col-md-4" style="text-align:right">Thumbnail</th>
+      <tr>
+    </thead>
+  </table>
+</nav>
+<div class="table-data">
+  <div>
+    <table class="table table-hover">
+      <tbody>
+        <tr *ngFor="let user of githubUsers" (click)="doClick(user)">
+          <th scope="row" class="col-md-4">{{user.login}}</th>
+          <td class="col-md-8"><a href="{{user.html_url}}">{{user.html_url}}</a></td>
+          <!--ideally, a bulk image retrieval method would be available, rather than one at a time-->
+          <td class="col-md-4"><img src="{{user.avatar_url}}" [class.gh-image]="true"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
